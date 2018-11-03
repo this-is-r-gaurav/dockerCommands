@@ -10,7 +10,7 @@ This Repository contain the cheatsheet for all the docker commands
   $ docker search ubuntu
   ```
 
-## 2. Launch a Container From Image Name(#launch-container-image)
+## 2. Launch a Container From Image Name
 
   When You launch a container It eill give You a hexadecimal string, The 12 digits of that hexadecimal string is
 
@@ -54,6 +54,6 @@ To view what was the output that a container that docker run as background, This
    ```
    ---
    
-  **Note:** Docker Container are Sanboxed, It means the host directly processes can't directly access the services running in docker. If a service running in Docker container need to be accessed by a process not running in a container, then the port needs to be exposed via the Host. This can be done either in the Dockerfile or the way as shown in [2](#launch-container-image)
+  **Note:** Docker Container are Sanboxed, It means the host directly processes can't directly access the services running in docker. If a service running in Docker container need to be accessed by a process not running in a container, then the port needs to be exposed via the Host. This can be done either in the Dockerfile or the way as shown in [2](#2-launch-a-container-from-image-name)
 )
 
