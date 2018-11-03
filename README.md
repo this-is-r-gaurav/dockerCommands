@@ -12,33 +12,52 @@ This Repository contain the cheatsheet for all the docker commands
 
 ## 2. Launch a Container From Image Name
 
-  When You launch a container It eill give You a hexadecimal string, The 12 digits of that hexadecimal string is
+  When You launch a container It eill give You a hexadecimal string, The 12 digits of that hexadecimal string is Container Unique ID
 
   + To launch a Container from the Latest Version of Image
   ```
   $ docker run <option_name> <image_name>
   ```
-  **Note** Various run Option
+  **Note** Various docker run flavor with various option
 
   ```
-    $ # By default the docker run the command in the foreground You can use -d option to run it in background
+    $ # To launch an image in background -d option
+    $
     $ docker run -d <image_name>
     $ docker run -d ubuntu
-    $
+    
     $ # To Map Host Port To the Container Port - The port on the host is mapped to 0.0.0.0
-    $ docker run -p <host-port>:<container-port> <image_name>
-    $ # or To bind a particular Ip
-    $ docker run -p <ip_addr>:<host-port>:<container-port> <image_name>    
     $
+    $ docker run -p <host-port>:<container-port> <image_name>
+    $
+    $ # or To bind a particular Ip
+    $
+    $ docker run -p <ip_addr>:<host-port>:<container-port> <image_name>   
+    $
+    $ # or To bind random Port of Host Machine
+    $
+    $ docker run -p <container-port> <image_name>
+ 
+    $ # To list port alloted
+    $
+    $ docker port -p <frinedly_name | container_id> <container_port>
+    
+    
     $ # To run Container with different name 
     $ docker run --name <different_name> <image_name>
+    
+    $ # container are designed to be build stateless, That is if You recreate a container the data will be removed 
+    $ # You can bind the Host directory with Your Container directory (or volumes) This lets you persist your data
+    $
+    $ docker run -v <host-dir-path>:<container-dir-path>
+    $ docker run -v $PWD:<container-dir-path>
 
   ```
     
 + To launch a specific Version of the image:
   
   ```
-    $ docker run -d <option_name> <image_name>:<vesion_number>
+    $ docker run <option_name> <image_name>:<vesion_number>
   ```
   
 ## 3. List all the container or Running Image
