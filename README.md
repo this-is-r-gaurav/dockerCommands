@@ -18,14 +18,25 @@ This Repository contain the cheatsheet for all the docker commands
   ```
   $ docker run <option_name> <image_name>
   ```
-  
-**For eg: By default the docker run the command in the foreground You can use -d option to run it in background**
+  **Note** Various run Option
+
   ```
+    $ # By default the docker run the command in the foreground You can use -d option to run it in background
     $ docker run -d <image_name>
     $ docker run -d ubuntu
+    $
+    $ # To Map Host Port To the Container Port - The port on the host is mapped to 0.0.0.0
+    $ docker run -p <host-port>:<container-port> <image_name>
+    $ # or To bind a particular Ip
+    $ docker run -p <ip_addr>:<host-port>:<container-port> <image_name>    
+    $
+    $ # To run Container with different name 
+    $ docker run --name <different_name> <image_name>
+
   ```
     
 + To launch a specific Version of the image:
+  
   ```
     $ docker run -d <option_name> <image_name>:<vesion_number>
   ```
