@@ -9,8 +9,14 @@ This Repository contain the cheatsheet for all the docker commands
   $ docker search <image_name>
   $ docker search ubuntu
   ```
+## 2. List all the images in Host Sysyem
+This command will list following details of the images in the system 
 
-## 2. Launch a Container From Image Name
+    ```
+      $ docker images
+    ```
+    
+## 3. Launch a Container From Image Name
 
   When You launch a container It eill give You a hexadecimal string, The 12 digits of that hexadecimal string is Container Unique ID
 
@@ -60,7 +66,7 @@ This Repository contain the cheatsheet for all the docker commands
     $ docker run <option_name> <image_name>:<vesion_number>
   ```
   
-## 3. List all the container or Running Image
+## 4. List all the container or Running Image
 
 This command will list following information **Container ID, Image, command, Created, Ports,  Names(Friendly_name)**
 
@@ -68,14 +74,14 @@ This command will list following information **Container ID, Image, command, Cre
     $ docker ps
   ```
 
-## 4. List Complete information of the Container
+## 5. List Complete information of the Container
  
    ```
       $ docker inspect <friendly_name | container_id >
    ```
    
   
-## 5. List Logs container printed on std out or std err
+## 6. List Logs container printed on std out or std err
 
 To view what was the output that a container that docker run as background, This is same as running the docker container in Foreground
 
@@ -86,10 +92,13 @@ To view what was the output that a container that docker run as background, This
    
   **Note:** Docker Container are Sanboxed, It means the host directly processes can't directly access the services running in docker. If a service running in Docker container need to be accessed by a process not running in a container, then the port needs to be exposed via the Host. This can be done either in the Dockerfile or the way as shown in [2](#2-launch-a-container-from-image-name)
 )
-   ---
- ## 6. Docker Build Image
+
+---
+ ## 7. Docker Build Image
  
  Before reading this command read, [How to Write Dockerfile]()? You can create a Docker Image From a Dockerfile using this command 
+ 
     ```
-      $ docker build -t <friendly_name>:<tag or version_number> <build_destination_folder>
-   ```
+      $ docker build -t <image_name>:<tag or version_number> <build_destination_folder>
+    ```
+
