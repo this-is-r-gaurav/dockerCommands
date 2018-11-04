@@ -13,3 +13,11 @@ Every Docker image starts from a **Base Image**. The **Base image is generally t
   ```
     FROM <image_name>{:<version>} 
   ```
+Then other commands can be any of the following ad desired by your application.
+
+2. CREATE command copies the content of content of the the directory you mentioned as *source_directory* into a particular location inside the container mentioned as *destination_directory*.
+
+  ```
+      CREATE <source_directory> <destination_directory>
+  ```
+
