@@ -97,8 +97,7 @@ To view what was the output that a container that docker run as background, This
  ## 7. Docker Build Image
  
  Before reading this command read, [How to Write Dockerfile]()? You can create a Docker Image From a Dockerfile using this command 
- 
-    ```
+ ```
       $ docker build -t <image_name>:<tag or version_number> <build_destination_folder>
-    ```
+```
 
