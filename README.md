@@ -75,15 +75,21 @@ This command will list following information **Container ID, Image, command, Cre
    ```
    
   
-## 5. List Logs the background container printed on std out or std err
+## 5. List Logs container printed on std out or std err
 
 To view what was the output that a container that docker run as background, This is same as running the docker container in Foreground
 
    ```
       $ docker logs <friendly_name | container_id >
    ```
-   ---
+  ---
    
   **Note:** Docker Container are Sanboxed, It means the host directly processes can't directly access the services running in docker. If a service running in Docker container need to be accessed by a process not running in a container, then the port needs to be exposed via the Host. This can be done either in the Dockerfile or the way as shown in [2](#2-launch-a-container-from-image-name)
 )
-
+   ---
+ ## 6. Docker Build Image
+ 
+ Before reading this command read, [How to Write Dockerfile]()? You can create a Docker Image From a Dockerfile using this command 
+    ```
+      $ docker build -t <friendly_name>:<tag or version_number> <build_destination_folder>
+   ```
