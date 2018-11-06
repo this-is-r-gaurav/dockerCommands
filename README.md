@@ -11,10 +11,10 @@ This Repository contain the cheatsheet for all the docker commands
   ```
 ## 2. List all the images in Host Sysyem
 This command will list following details of the images in the system 
-
-    ```
+  
+  ```
       $ docker images
-    ```
+  ```
     
 ## 3. Launch a Container From Image Name
 
