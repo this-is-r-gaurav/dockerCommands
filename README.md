@@ -101,3 +101,22 @@ To view what was the output that a container that docker run as background, This
       $ docker build -t <image_name>:<tag or version_number> <build_destination_folder>
 ```
 
+ ## 8. Remove an image
+ **Note:** You can remove an image only and only if the image has no referenced container, until you pass the forcefully command
+ 
+  ```
+    $ docker rmi <image_id | friendly_name>
+  ```
+ ## 9. Delete all Container
+ **Note:** You can remove an image only and only if the image has no referenced container
+ 
+  ```
+    $ docker kill <image_id | friendly_name>
+  ```
+## 10. Remove Errored image and container
+
+ 
+  ```
+    $ docker system prune
+  ```
+
