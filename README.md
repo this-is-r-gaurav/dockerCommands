@@ -54,9 +54,11 @@ This command will list following details of the images in the system
     
     $ # container are designed to be build stateless, That is if You recreate a container the data will be removed 
     $ # You can bind the Host directory with Your Container directory (or volumes) This lets you persist your data
-    $
     $ docker run -v <host-dir-path>:<container-dir-path>
     $ docker run -v $PWD:<container-dir-path>
+    
+    $ # To use data from other docker container
+    $ docker run --volume-from <container_name> <image_name>
 
   ```
     
@@ -115,8 +117,44 @@ To view what was the output that a container that docker run as background, This
   ```
 ## 10. Remove Errored image and container
 
- 
   ```
     $ docker system prune
   ```
 
+## 11. Docker Create Command
+ 
+ Docker create command is used to create a new container(generally data container).  
+
+  ```
+    $ docker create <option_name> <image> <command_optional> <arguments>
+    $ docker create -v /data --name my_data_container ubuntu
+  ```
+  
+## 12. Docker cp command
+
+It is a two way copy command it copies the data from src to destination as mentioned below.
+
+  ```
+    $ docker cp <options_name> <container>:<src_in_container> <dest_path> or <->
+    $ docker cp <option_name> <src_in_system> or <-> <container>:<dest_path>
+  ```
+  
+## 13. Docker export 
+To export a container in tar format
+
+  ```
+    $ docker export <option_name> <container_name>
+    $ docker export --output="file.tar" <container_name>
+    $ docker export <container_name> > file.tar
+    
+  ```
+  
+  ## 14. Docker import
+To export a container in tar format
+
+  ```
+    $ docker export <option_name> <container_name>
+    $ docker export --output="file.tar" <container_name>
+    $ docker export <container_name> > file.tar
+    
+  ```
