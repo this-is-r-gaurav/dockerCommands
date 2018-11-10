@@ -107,7 +107,7 @@ To view what was the output that a container that docker run as background, This
   ```
     $ docker rmi <image_id | friendly_name>
   ```
- ## 9. Delete all Container
+ ## 9. Delete Container
  **Note:** You can remove an image only and only if the image has no referenced container
  
   ```
